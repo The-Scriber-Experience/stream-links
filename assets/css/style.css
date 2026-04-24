@@ -47,6 +47,26 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.9rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.header-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.55));
+}
+
+.header-title {
+    font-size: clamp(1.4rem, 2.4vw, 2.4rem);
+    line-height: 1.1;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
 }
 
 .sidebar {
