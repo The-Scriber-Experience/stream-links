@@ -50,23 +50,32 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 0.9rem;
     padding: 0.75rem 1.25rem;
 }
 
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    min-width: 0;
+}
+
 .header-logo {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 50%;
     flex-shrink: 0;
-    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.55));
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.35);
 }
 
 .header-title {
-    font-size: clamp(1.4rem, 2.4vw, 2.4rem);
+    font-size: clamp(1.35rem, 2.4vw, 2.3rem);
     line-height: 1.1;
     font-weight: bold;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
 }
 
 .sidebar {
@@ -230,7 +239,6 @@ body {
     overflow-wrap: anywhere;
     word-break: break-word;
     background-color: var(--glass-bg);
-    /*border: 1px solid var(--glass-border);*/
     border-radius: 4px;
     border: 6px solid #171717;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
