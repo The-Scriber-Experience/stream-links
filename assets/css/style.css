@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Eagle+Lake&family=MedievalSharp&family=Philosopher&family=UnifrakturMaguntia&display=swap');
+
+:root {
+    /* Color palette */
+    --color-bg: #0D1117;
+    --color-surface: #161B22;
+    --color-primary: #14B5FF;
+    --color-secondary: #845CCC;
+    --color-text: #C9D1D9;
+    --color-link: #14B5FF;
+    --color-link-hover: #C5F8FF;
+
+    --gradient-1: linear-gradient(to right bottom, #00C8FF, #14A5FF, #7066FF, #5E17EB);
+    --gradient-2: linear-gradient(#00FFEE, #27AAFF);
+
+    /* Font families */
+    --font-aclonica: 'Aclonica', sans-serif;
+
+    /* Glassmorphism */
+    --glass-bg: rgba(0, 0, 0, 0.5);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+}
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-aclonica);
+    color: var(--color-text);
+}
+
+
+/* Page layout */
+.container {
+    display: grid;
+    width: 1000px;
+    height: 800px;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 100px 1fr 0.75fr 100px;
+    grid-gap: 0.5rem;
+}
+
+.header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    background-image: url('../images/spacebackground.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.sidebar {
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+    padding: 200px;
+    background-image: linear-gradient(160deg, #120548 0%, #2378a3 127%);
+    background-size: cover;
+}
+
+.content-1 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
+    background-image: var(--gradient-2);
+    font-size: 12px;
+}
+
+.content-2 {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    background-image: var(--gradient-1);
+    font-size: 10px;
+}
+
+.content-3 {
+    grid-row: 3 / 4;
+    grid-column: 3 / 4;
+    background-image: var(--gradient-1);
+    font-size: 10px;
+}
+
+.footer {
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+    background-color: #6C52D9;
+    background-image: linear-gradient(160deg, #6C52D9 0%, #9B8AE6 127%);
+}
+
+/* Main container styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 20px;
+    margin: 0;
+    background-image: url('../images/wisp.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    border: 6px solid #171717;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.back {
+    font-size: 1.5rem;
+    line-height: 2em;
+    white-space: nowrap;
+}
+
+
