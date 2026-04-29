@@ -717,3 +717,15 @@ body {
   text-decoration: line-through;
   opacity: 0.6;
 }
+
+/* Fix for PyScript error/splash screen causing layout issues */
+py-error, .py-error, py-terminal, .py-terminal {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden !important;
+    visibility: hidden !important;
+    display: none !important;
+}
