@@ -81,6 +81,10 @@
     font-weight: bold;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
     white-space: nowrap;
+    background: linear-gradient(135deg, #00FFEE, #14B5FF, #7952F5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .sidebar {
@@ -331,11 +335,89 @@ body {
     text-decoration: none;
 }
 
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        width: 95%;
+        margin-top: 20px;
+    }
+
+    .header {
+        grid-column: 1 / 3;
+    }
+
+    .sidebar {
+        grid-row: auto;
+        grid-column: 1 / 2;
+    }
+
+    .content-1 {
+        grid-row: auto;
+        grid-column: 2 / 3;
+    }
+
+    .content-2 {
+        grid-row: auto;
+        grid-column: 1 / 2;
+    }
+
+    .content-3 {
+        grid-row: auto;
+        grid-column: 2 / 3;
+    }
+
+    .footer {
+        grid-column: 1 / 3;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .header, .sidebar, .content-1, .content-2, .content-3, .footer {
+        grid-column: 1 / 2;
+    }
+
+    .header-brand {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-title {
+        white-space: normal;
+        font-size: 1.5rem;
+    }
+    
+    .item {
+        padding: 1rem;
+    }
+
+    .content-3 .producer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 700px) {
     .content-3 .producer-grid {
         grid-template-columns: 1fr;
     }
 }
+/* Emoji style to restore original colors */
+.emoji {
+    background: transparent !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+    -webkit-text-fill-color: initial !important;
+    color: initial !important;
+    text-shadow: none !important;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* Eigenscribe wisp background */
 .eigenscribe-bg {
   background-image: url('../images/wisp.jpg');
