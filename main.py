@@ -48,7 +48,8 @@ def add_task(e):
         task_html_content._js.classList.toggle("line-through", task["done"])
 
     new_task_content.value = ""
-    task_html_check._js.onclick = check_task
+    # Use _js.onchange instead of _js.onclick for better checkbox behavior
+    task_html_check._js.onchange = check_task
 
 
 def add_task_event(e):
