@@ -81,7 +81,7 @@
     font-weight: bold;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
     white-space: nowrap;
-    background: linear-gradient(135deg, #00FFEE, #14B5FF, #7952F5);
+    background: linear-gradient(135deg, #00f2ff, #3b82f6, #8b5cf6, #ec4899);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -200,7 +200,7 @@
 
 .footer-text {
     font-family: var(--font-aclonica);
-    background: linear-gradient(130deg, #00ffee, #0a95eb);
+    background: linear-gradient(130deg, #00ffee, #10b981);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -229,7 +229,7 @@
     font-size: clamp(1.2rem, 2vw, 1.8rem);
     line-height: 1.2;
     margin-bottom: 0.75rem;
-    background: linear-gradient(135deg, #00e8ff, #14b5ff, #7952f5);
+    background: linear-gradient(135deg, #00f2ff, #3b82f6, #8b5cf6, #ec4899);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -422,18 +422,23 @@ body {
 .producer-gradient-text,
 .producer-gradient-green,
 .sidebar-header-gradient,
-.footer-text {
+.metadata-gradient-text,
+.footer-text,
+.content-1 h1,
+.content-2 h1,
+.content-3 h1 {
     background-size: 200% auto !important;
     animation: gradient-shift 5s ease infinite !important;
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.4)) brightness(1.15);
 }
 
 .producer-gradient-green {
-    background: linear-gradient(135deg, #22c55e, #166534);
+    background: linear-gradient(135deg, #4ade80, #06b6d4, #3b82f6);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* Custom Scrollbar */
@@ -460,6 +465,10 @@ body {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar .buttons {
+    margin: 0.5rem auto 1.5rem auto;
 }
 
 /* Add a subtle glow to producer cards on hover */
@@ -491,23 +500,23 @@ body {
 
 /* Eigenscribe gradient text */
 .eigenscribe-gradient-text {
-  background: linear-gradient(135deg, #00d2ff, #3a7bd5, #7952f5);
+  background: linear-gradient(135deg, #00f2ff, #10b981, #3b82f6);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  text-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
   font-weight: 800;
 }
 
 /* Purple-pinkish gradient for producers */
 .producer-gradient-text {
-  background: linear-gradient(135deg, #d200ab, #8a2be2, #7952f5);
+  background: linear-gradient(135deg, #f472b6, #8b5cf6, #3b82f6);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
   font-weight: 800;
 }
 
@@ -550,7 +559,6 @@ body {
 
 /* Sidebar section header gradient text */
 .sidebar-header-gradient {
-  background-image: linear-gradient(135deg, #4df3ff, #85d7ff, #b499ff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -560,9 +568,17 @@ body {
   font-weight: 800;
 }
 
+.stream-links-header {
+  background-image: linear-gradient(135deg, #8b5cf6, #ec4899, #f43f5e);
+}
+
+.content-creation-header {
+  background-image: linear-gradient(135deg, #06b6d4, #10b981, #facc15);
+}
+
 /* Light highlight for sidebar headers */
 .sidebar-header-highlight {
-  background: linear-gradient(90deg, rgba(20, 181, 255, 0.08), rgba(121, 82, 245, 0.05), transparent);
+  background: linear-gradient(90deg, rgba(20, 181, 255, 0.15), rgba(121, 82, 245, 0.12), transparent);
   border-radius: 6px;
   padding: 5px 10px;
   margin-bottom: 10px;
@@ -593,13 +609,12 @@ body {
 
 /* Warm orange gradient text effect */
 .metadata-gradient-text {
-  background: #ff7b54; /* Fallback */
-  background: linear-gradient(to right, #ff7b54, #ffb26b, #ffd56b);
+  background: #ff8c6b; /* Fallback */
+  background: linear-gradient(to right, #f97316, #facc15, #ec4899);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
-  filter: drop-shadow(0 0 1px rgba(0,0,0,0.5));
   padding: 0 2px;
 }
 
