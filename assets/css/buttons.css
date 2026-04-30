@@ -7,7 +7,7 @@
 
 .btn-hover {
   width: 100px;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
   color: whitesmoke;
   cursor: pointer;
@@ -22,6 +22,22 @@
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-hover p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.btn-hover .emoji {
+  font-size: 11px;
 }
 
 .btn-hover:hover {
@@ -38,14 +54,14 @@
 
 .btn-hover a {
   color: whitesmoke;
-  text-shadow: 0 0 5px rgb(79 21 238);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
   text-decoration: none;
   transition: color .3s ease-in-out;
 }
 
 .btn-hover a:hover {
   color: whitesmoke;
-  text-shadow: 0 0 5px rgb(0 166 255 / 0.75);
+  text-shadow: 0 0 8px rgba(0, 166, 255, 0.9);
 }
 
 .btn-hover.color-1 {
@@ -69,7 +85,7 @@
   box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
 }
 .btn-hover.color-6 {
-  background-image: linear-gradient(to right, #009245, #3f86ed, #8E37D7, #fa7199);
+  background-image: linear-gradient(to right, #009245, #3f86ed, #6253e1, #8E37D7, #fa7199);
   box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
 }
 .btn-hover.color-7 {
